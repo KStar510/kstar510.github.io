@@ -15,24 +15,48 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// portfolio variables
+const portfolioItem = document.querySelectorAll("[data-portfolio-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+// modal variable
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalTime = document.querySelector("[data-modal-time]");
+const modalText = document.querySelector("[data-modal-text]");
+const modalLink = document.querySelector("[data-modal-link]");
 
-  });
+// modal toggle function
+const portfolioModalFunc = function () {
+    modalContainer.classList.toggle("active");
+    overlay.classList.toggle("active");
 }
+
+// add click event to all modal items
+for (let i = 0; i < portfolioItem.length; i++) {
+
+    portfolioItem[i].addEventListener("click", function () {
+
+        modalImg.src = this.querySelector("[data-portfolio-avatar]").src;
+        modalImg.alt = this.querySelector("[data-portfolio-avatar]").alt;
+        modalTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
+        modalTime.innerHTML = this.querySelector("[data-portfolio-time]").innerHTML;
+        modalText.innerHTML = this.querySelector("[data-portfolio-text]").innerHTML;
+        modalLink.href = this.querySelector("[data-portfolio-link]").href;
+
+        portfolioModalFunc();
+
+    });
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", portfolioModalFunc);
+overlay.addEventListener("click", portfolioModalFunc);
+
 
 
 
