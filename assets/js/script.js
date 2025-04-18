@@ -40,8 +40,9 @@ for (let i = 0; i < portfolioItem.length; i++) {
 
     portfolioItem[i].addEventListener("click", function () {
 
-        modalImg.src = this.querySelector("[data-portfolio-avatar]").src;
-        modalImg.alt = this.querySelector("[data-portfolio-avatar]").alt;
+        //modalImg.src = this.querySelector("[data-portfolio-avatar]").src;
+        //modalImg.alt = this.querySelector("[data-portfolio-avatar]").alt;
+        modalImg.innerHTML = this.querySelector("[data-portfolio-avatar]").innerHTML;
         modalTitle.innerHTML = this.querySelector("[data-portfolio-title]").innerHTML;
         modalTime.innerHTML = this.querySelector("[data-portfolio-time]").innerHTML;
         modalText.innerHTML = this.querySelector("[data-portfolio-text]").innerHTML;

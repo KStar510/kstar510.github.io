@@ -746,6 +746,31 @@ main {
   font-weight: var(--fw-300);
 }
 
+.project-image-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0 -30px;
+    padding: 25px 15px;
+    padding-bottom: 35px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    max-width:678px;
+}
+
+.project-image-item {
+    scroll-snap-align: center;
+}
+
+.project-image-box {
+    border-radius: 18px;
+    box-shadow: var(--shadow-2);
+    max-height: 250px;
+}
+
 
 /**
  * #portfolio-modal
