@@ -597,7 +597,10 @@ main {
 
 .skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { 
+    padding: 20px;
+    column-count: 3;
+}
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
