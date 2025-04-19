@@ -298,7 +298,6 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-sky-blue);
   border-radius: 20px;
 }
 
@@ -313,10 +312,10 @@ main {
 .info-content .title {
   color: var(--white-1);
   background: var(--red);
-  font-size: var(--fs-8);
-  font-weight: var(--fw-300);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
   width: max-content;
-  padding: 3px 12px;
+  padding: 3px 8px;
   border-radius: 8px;
 }
 
@@ -753,7 +752,6 @@ main {
     gap: 15px;
     margin: 0 -30px;
     padding: 25px 15px;
-    padding-bottom: 35px;
     overflow-x: auto;
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
